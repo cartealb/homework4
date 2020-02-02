@@ -88,7 +88,7 @@ nav {
     text-align: left;
     /*Your code here*/
     /*Span the top row*/
-    grid-column: 1 / span end;
+    grid-column: 1 / -1;
     grid-row: 1 / span 1;
 }
 
@@ -104,11 +104,11 @@ header {
     color: white;
     height: 400px;
     /* Parallax effect */
-    /* Your code here */
     /* Set background-image to header.jpg in the images folder */
     /* Span one row */
-    grid-column: 1 / span end;
-    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    grid-row: 2 / span 1;
+    background-image: url('../images/header.jpg');
 }
 
 header p {
@@ -118,16 +118,12 @@ header p {
     text-align: center;
 }
 
-img {
-    width: 100%;
-}
-
 .container {
     /*Your code here  */
     /* See documentation for mobile view */
     display: grid;
-    grid-template-columns: 100px, 400px, 100px;
-    grid-template-rows: 30px, repeat(auto), 100px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 30px repeat(5, auto) 100px;
     grid-row-gap: 15px;
 }
 
@@ -146,7 +142,9 @@ img {
 .contact-image {
     /*Your code here */
     /* See documentation for mobile view */
-    grid-column: 2 / span 1;
+    grid-column: 1 / -1;
+    max-height: 700px;
+    overflow: hidden;
     /*check on b for this one*/
 }
 
@@ -154,36 +152,28 @@ img {
 .about-image {
     /*Your code here */
     /* See documentation for mobile view */
-    grid-column: 1 / span end;
-    max-height: 700px;
-    overflow: hidden;
+    grid-row: 3 / span 1;
 }
 
 .method,
 .method-image {
     /*Your code here */
     /* See documentation for mobile view */
-    grid-column: 1 / span end;
-    max-height: 700px;
-    overflow: hidden;
+    grid-row: 4 / span 1;
 }
 
 .clients,
 .clients-image {
     /*Your code here */
     /* See documentation for mobile view */
-    grid-column: 1 / span end;
-    max-height: 700px;
-    overflow: hidden;
+    grid-row: 5 / span 1;
 }
 
 .contact,
 .contact-image {
     /*Your code here */
     /* See documentation for mobile view */
-    grid-column: 1 / span end;
-    max-height: 700px;
-    overflow: hidden;
+    grid-row: 6 / span 1;
 }
 
 .text-block {
@@ -192,6 +182,7 @@ img {
     padding: 30px;
     /*Your code here:*/
     /*Align the content in the center */
+    justify-content: center;
 }
 
 @media all and (min-width: 800px) {
