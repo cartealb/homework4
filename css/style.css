@@ -155,7 +155,7 @@ header p {
     /*Your code here */
     /* See documentation for mobile view */
     grid-row: 3 / span 1;
-    margin: auto;
+    align-items: center;
 }
 
 .method,
@@ -163,7 +163,6 @@ header p {
     /*Your code here */
     /* See documentation for mobile view */
     grid-row: 4 / span 1;
-    margin: auto;
 }
 
 .clients,
@@ -171,7 +170,6 @@ header p {
     /*Your code here */
     /* See documentation for mobile view */
     grid-row: 5 / span 1;
-    margin: auto;
 }
 
 .contact,
@@ -179,7 +177,6 @@ header p {
     /*Your code here */
     /* See documentation for mobile view */
     grid-row: 6 / span 1;
-    margin: auto;
 }
 
 .text-block {
@@ -188,13 +185,16 @@ header p {
     padding: 30px;
     /*Your code here:*/
     /*Align the content in the center */
-    justify-content: center;
+    margin: auto;
 }
 
 @media all and (min-width: 800px) {
     .container {
         /*Your code here */
         /* See documentation for desktop view */
+        grid-template-columns: 50px auto 500px auto 50px;
+        grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+        overflow: hidden;
     }
     nav {
         background-color: #ddd;
@@ -208,6 +208,7 @@ header p {
     .contact-image {
         /*Your code here */
         /* See documentation for desktop view */
+        grid-column: 3 / span 2;
     }
     .about-image,
     .clients-image,
@@ -215,6 +216,7 @@ header p {
     .contact {
         /*Your code here */
         /* See documentation for desktop view */
+        grid-column: 2 / span 2;
     }
 }
 
