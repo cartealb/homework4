@@ -47,7 +47,6 @@ nav a:hover {
     /*Your code here - place 40px higher */
     position: relative;
     top: -40px;
-    ;
 }
 
 
@@ -66,9 +65,7 @@ link to the exact top of the page.*/
 border around all elements in focus.*/
 
 *:focus {
-    position: absolute;
     border: 2px solid black;
-    top: 0px;
 }
 
 footer {
